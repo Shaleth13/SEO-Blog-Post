@@ -5,4 +5,4 @@ def save_blog_to_file(title, content):
     filename = "blogs/" + title.lower().replace(" ", "_") + ".html"
     with open(filename, "w", encoding="utf-8") as f:
         f.write(f"<h1>{title}</h1>\n<p>{content}</p>")
-    print(f"✅ Blog saved: {filename}")
+    print(f"Blog saved: {filename}")
