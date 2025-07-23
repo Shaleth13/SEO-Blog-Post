@@ -9,11 +9,11 @@ import pandas as pd
 
 products = get_sample_products()
 df = pd.DataFrame(products)
-print("📦 Products Processed:")
+print("Products Processed:")
 display(df)
 
 for product in products:
-    print(f"\n🔄 Processing: {product['title']}")
+    print(f"\n Processing: {product['title']}")
     keywords = get_keywords_for_product(product["title"])
     blog_post = generate_blog_post(product["title"], keywords, product["link"])
     save_blog_to_file(product["title"], blog_post)
