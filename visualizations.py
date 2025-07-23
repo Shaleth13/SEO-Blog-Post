@@ -13,7 +13,7 @@ def generate_all_charts(products):
     plt.figure(figsize=(10, 5))
     plt.imshow(wordcloud, interpolation="bilinear")
     plt.axis("off")
-    plt.title("🔑 SEO Keyword Word Cloud")
+    plt.title("SEO Keyword Word Cloud")
     plt.show()
 
     # Blog Length Bar Chart
@@ -45,13 +45,13 @@ def generate_all_charts(products):
             categories["misc"] += 1
     plt.figure(figsize=(6,6))
     plt.pie(categories.values(), labels=categories.keys(), autopct='%1.1f%%', colors=plt.cm.Set3.colors)
-    plt.title("🧩 Product Type Distribution")
+    plt.title("Product Type Distribution")
     plt.show()
 
     # Cumulative Word Count Line Graph
     cum_lengths = np.cumsum([len(p["title"].split()) + 150 for p in products])
     plt.plot(range(1, len(products)+1), cum_lengths, marker='o', linestyle='--', color='green')
-    plt.title("📈 Cumulative Word Count Over Posts")
+    plt.title("Cumulative Word Count Over Posts")
     plt.xlabel("Post Number")
     plt.ylabel("Total Words Written")
     plt.grid(True)
